@@ -1,8 +1,8 @@
 const PROTOCOL = 'http';
 
 export const config = {
-    API_URL: `${PROTOCOL}://api.foodcentral.com.au:8080/api`,
-    STORAGE_URL: `${PROTOCOL}://api.foodcentral.com.au:8080/storage/`,
+    API_URL: `${PROTOCOL}://api.foodmart.com.au:8080/api`,
+    STORAGE_URL: `${PROTOCOL}://api.foodmart.com.au:8080/storage/`,
 }
 
 export const constants = {

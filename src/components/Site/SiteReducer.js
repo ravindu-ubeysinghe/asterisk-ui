@@ -1,4 +1,4 @@
-import { FETCH_SITE_DATA, SET_SERVER_ERROR } from './SiteActionTypes';
+import { SAVE_SITE_DATA, SET_SERVER_ERROR } from './SiteActionTypes';
 
 const initialState = {
     id: null,
@@ -15,12 +15,12 @@ const initialState = {
     logo_url: '',
     pages: [],
     components: [],
-    server_error: {},
+    server_error: null,
 }
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case FETCH_SITE_DATA:
+        case SAVE_SITE_DATA:
             return {
                 ...state,
                 ...action.payload?.site,

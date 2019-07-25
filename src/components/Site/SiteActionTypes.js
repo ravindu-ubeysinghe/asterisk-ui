@@ -1,2 +1,3 @@
 export const FETCH_SITE_DATA = 'FETCH_SITE_DATA';
+export const SAVE_SITE_DATA = 'SAVE_SITE_DATA';
 export const SET_SERVER_ERROR = 'SET_SERVER_ERROR';

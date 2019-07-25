@@ -16,7 +16,7 @@ export default function fetchSiteData() {
                     } else {
                         dispatch({
                             type: SET_SERVER_ERROR,
-                            payload: (site_data?.error || constants.GENERIC_SERVER_ERROR),
+                            payload: (site_data?.error_message || constants.GENERIC_SERVER_ERROR),
                         });
                     }
                 })
