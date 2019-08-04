@@ -8,6 +8,7 @@ import styles from './Header.module.css';
 export default function Header() {
     const logoUrl = useSelector((state) => state.site.logo_url);
     const logoText = useSelector((state) => state.site.logo_text);
+    const mainSite = isMainSite();
 
     const getLogo = () => {
         if(logoUrl) {
@@ -24,8 +25,8 @@ export default function Header() {
             </div>
             <div className={styles.mainMenu}>
                 <ul>
-                    {isMainSite() 
-                        ? (<li><Link to="/restaurants">Restaurants</Link></li>)
+                    {mainSite
+                        ? (<li><Link to={mainSite.menuLink}>{mainSite.menuItem}</Link></li>)
                         : (<li><Link to="/menu">Menu</Link></li>)}
                     <li><Link to="/login">Login</Link></li>
                 </ul>

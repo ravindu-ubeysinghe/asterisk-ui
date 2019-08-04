@@ -3,7 +3,6 @@ import { config, constants } from '../../config';
 import { get } from '../../utils/api';
 
 function* saveSiteData(payload) {
-    console.log(payload);
     if (payload?.success) {
         yield put({
             type: 'SAVE_SITE_DATA',

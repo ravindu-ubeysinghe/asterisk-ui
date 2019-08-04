@@ -7,7 +7,6 @@ export async function get(url, headers) {
         let data = await fetch(`${url}${parsedHeaders}`);
         return await data.json();
     } catch(e) {
-        console.log(e);
         return e;
     }
 }

@@ -5,7 +5,6 @@ export default function Alert({ children, timeout, remove }) {
     const timer = useRef();
 
     useEffect(() => {
-        console.log(children)
         timer.current = setTimeout(() => {
             setVisible(false);
             remove();

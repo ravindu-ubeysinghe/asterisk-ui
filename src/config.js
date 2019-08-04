@@ -24,7 +24,8 @@ export const componentIDS = {
 }
 
 export const mainSites = [
-    'foodmart.com.au'
+    {domain: 'foodmart.com.au', menuItem: 'Restaurants', menuLink: '/restaurants'}
+    // TODO: Add other main sites 
 ]
 
 // Functions
@@ -35,5 +36,12 @@ export const getAsset = (filename) => {
 
 export const isMainSite = () => {
     const url = parse(window.location.href, true);
-    return mainSites.includes(url.hostname);
+    const mainSite = mainSites.map((site) => {
+        if(site.domain === url.hostname) {
+            return site;
+        }
+        return false;
+    });
+
+    return mainSite[0];
 }
