@@ -1,0 +1,30 @@
+.wrapper {
+    background-image: url('/assets/img/404bg.jpg');
+    background-size: cover;
+    padding: var(--padding-huge);
+    height: 100vh;
+    color: var(--white);
+}
+
+.content {
+    margin-top: calc(50vh - 100px);
+    max-height: 100px;
+    text-align: center;
+}
+
+.logo { 
+    font-size: 35px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo:after {
+    background-color: var(--white);
+    content: "";
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 50px;
+    margin: 0 auto;
+}

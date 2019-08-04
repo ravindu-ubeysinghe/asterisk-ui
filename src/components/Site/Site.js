@@ -5,19 +5,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import Home from '../../views/Home/Home';
 import About from '../../views/About/About';
 import NotFound from './NotFound/NotFound';
-
-import { FETCH_SITE_DATA } from './SiteActionTypes';
-// import fetchSiteData from './SiteActions';
+import Loader from '../../components/Loader/Loader';
 
 export default function Site() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch({ type: FETCH_SITE_DATA });
+        dispatch({ type: 'FETCH_SITE_DATA' });
     }, [dispatch]);
 
-    const server_error = useSelector((state) => state.site.server_error);
+    const server_error = useSelector(({ site }) => site.server_error);
+    const loading = useSelector(({ site }) => site.loading);
 
+    if(loading) {
+        return <Loader />;
+    }
     return (
         <>
             {!server_error ? (
@@ -25,6 +27,7 @@ export default function Site() {
                     <Switch>
                         <Route path="/" exact component={Home} />
                         <Route path="/about" component={About} />
+                        <Route component={NotFound} />
                     </Switch>
                 </BrowserRouter>
             ) : (

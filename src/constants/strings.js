@@ -1,0 +1,1 @@
+export const NOT_FOUND = "Unfortunately, we cannot find what you're looking for!";

@@ -1,5 +1,3 @@
-import { SAVE_SITE_DATA, SET_SERVER_ERROR } from './SiteActionTypes';
-
 const initialState = {
     id: null,
     name: '',
@@ -15,22 +13,33 @@ const initialState = {
     logo_url: '',
     pages: [],
     components: [],
+    loading: true,
     server_error: null,
 }
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case SAVE_SITE_DATA:
+        case 'SAVE_SITE_DATA':
             return {
                 ...state,
-                ...action.payload?.site,
-                pages: action.payload?.pages,
-                components: action.payload?.components,
+                ...action.payload ?.site,
+                pages: action.payload ?.pages,
+                components: action.payload ?.components,
             }
-        case SET_SERVER_ERROR:
+        case 'SET_SERVER_ERROR':
             return {
                 ...state,
                 server_error: action.payload,
+            }
+        case 'LOADING_SITE_DATA':
+            return {
+                ...state,
+                loading: true,
+            }
+        case 'LOADED_SITE_DATA':
+            return {
+                ...state,
+                loading: false,
             }
         default:
             return state;

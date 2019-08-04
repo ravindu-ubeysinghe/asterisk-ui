@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #fff;
+    padding: var(--padding-huge) var(--padding-large) var(--padding) var(--padding-large);
+}
+
+.logo {
+    max-width: 20%;
+    max-height: 80px;
+    display: inline-block;
+}
+
+.mainMenu {
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+.mainMenu li {
+    list-style: none;
+}

@@ -5,7 +5,7 @@ import { isArray } from 'lodash';
 
 import SearchBar from '../../components/SearchBar/SearchBar';
 
-import './Carousel.css';
+import styles from './Carousel.module.css';
 
 export default function Carousel() {
     // TODO: Create backend for carousel and fetch here
@@ -25,10 +25,10 @@ export default function Carousel() {
 
     return (
         <>
-            {carousel && <div className="wbc-carousel">
-                <div className="wbc-carousel-inner">
-                    <h1>{carousel.content_text || constants.GENERIC_PLACEHOLDER}</h1>
-                    <p>{carousel.content_text || constants.GENERIC_PLACEHOLDER}</p>
+            {carousel && <div className={styles.carousel}>
+                <div className={styles.carouselInner}>
+                    <h1>{carousel.content_title || constants.GENERIC_PLACEHOLDER}</h1>
+                    <p>{carousel.content_subtitle || constants.GENERIC_PLACEHOLDER}</p>
                     <SearchBar />
                 </div>
             </div>}
