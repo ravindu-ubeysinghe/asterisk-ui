@@ -1,0 +1,26 @@
+.searchBox {
+    margin-top: var(--padding-large);
+}
+
+.searchbar {
+    width: 400px;
+    border-radius: 15px 0px 0px 15px;
+    border-style: hidden;
+    padding: var(--padding) var(--padding-large);
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.searchbutton {
+    width: auto;
+    padding: var(--padding) var(--padding-large);
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 15px;
+    margin-left: -15px;
+    border: none;
+    font-size: 15px;
+    line-height: 20px;
+}

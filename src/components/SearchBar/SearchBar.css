@@ -1,8 +1,0 @@
-.wbc-searchbar {
-    width: 300px;
-    border-radius: 15px;
-    border-style: hidden;
-    padding: var(--padding-small) var(--padding-normal);
-    box-shadow: 2px 0px 14px #000;
-    margin: 0 auto;
-}

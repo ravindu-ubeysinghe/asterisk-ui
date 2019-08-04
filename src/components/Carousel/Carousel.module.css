@@ -18,11 +18,10 @@
 }
 
 .carousel h1 {
-    color: #fff;
+    color: #555;
     top: 50px;
     left: 25px;
     text-align: center;
-    text-shadow: 5px 5px 7px rgba(0,0,0,0.5);
 }
 
 .carousel p {

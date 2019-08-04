@@ -1,3 +1,5 @@
+import parse from 'url-parse';
+
 const PROTOCOL = 'http';
 
 export const config = {
@@ -19,4 +21,19 @@ export const pageIDS = {
 export const componentIDS = {
     CAROUSEL: 'carousel',
     BANNER: 'banner',
+}
+
+export const mainSites = [
+    'foodmart.com.au'
+]
+
+// Functions
+
+export const getAsset = (filename) => {
+    return `${config.STORAGE_URL}${filename}`;
+}
+
+export const isMainSite = () => {
+    const url = parse(window.location.href, true);
+    return mainSites.includes(url.hostname);
 }

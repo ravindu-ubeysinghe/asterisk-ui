@@ -11,6 +11,7 @@ const initialState = {
     domain: '',
     theme_colour: '',
     logo_url: '',
+    logo_text: '',
     pages: [],
     components: [],
     loading: true,

@@ -1,12 +1,32 @@
 .navbar {
-    background-color: #fff;
-    padding: var(--padding-huge) var(--padding-large) var(--padding) var(--padding-large);
+    background-color: var(--white);
+    padding: var(--padding-large);
+    max-height: 120px;
 }
 
 .logo {
     max-width: 20%;
-    max-height: 80px;
+    max-height: 40px;
     display: inline-block;
+}
+
+.logoText {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.logoImg {
+    max-height: 40px;
+}
+
+.logoText:after {
+    background-color: var(--black);
+    content: "";
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 50px;
+    margin: 0 auto;
 }
 
 .mainMenu {
@@ -15,6 +35,16 @@
     float: right;
 }
 
+.mainMenu ul {
+    float: right;
+    margin-bottom: 0px;
+}
+
 .mainMenu li {
     list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 40px;
 }

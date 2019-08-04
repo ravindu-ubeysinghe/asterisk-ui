@@ -11,4 +11,11 @@ span,
 strong,
 b {
   font-size: 15px;
+  color: var(--black);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: var(--black);
 }
