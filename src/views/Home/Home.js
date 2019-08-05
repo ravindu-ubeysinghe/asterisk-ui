@@ -11,9 +11,7 @@ export default function Index() {
             <Helmet>
                 <title>{`Home Page | ${siteName}`}</title>
             </Helmet>
-            <div className="container">
-                <Carousel />
-            </div>
+            <Carousel />
         </>
     );
 }

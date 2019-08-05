@@ -1,15 +1,13 @@
 import React from 'react';
-import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 import styles from './Footer.module.css';
 
-export default function Footer({ isHome }) {
-    const className = cx(styles.footer, (isHome && styles.footerHome));
+export default function Footer() {
     return (
-        <>
-            <div className={className}>Footer</div>
-        </>
+        <div className={styles.footer}>
+            <h3>Footer</h3>
+        </div>
     )
 }
 
