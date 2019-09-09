@@ -4,8 +4,8 @@ import { render } from 'react-snapshot';
 import App from './components/App/App';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import './variables.css';
-import './index.css';
+import './variables.scss';
+import './index.scss';
 
 render(
     <App />,

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getAsset, isMainSite } from '../../config';
 
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
 export default function Header() {
     const logoUrl = useSelector((state) => state.site.logo_url);

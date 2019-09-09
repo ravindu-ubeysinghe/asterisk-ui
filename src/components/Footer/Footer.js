@@ -1,12 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 
 export default function Footer() {
+    const siteName = useSelector(({ site }) => site.name);
+
     return (
         <div className={styles.footer}>
-            <h3>Footer</h3>
+            <div className={styles.copyright}>{`\u00A9 ${siteName}`} | a part of eMart</div>
+            <div className={styles.menu}>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
         </div>
     )
 }

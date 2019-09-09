@@ -1,12 +1,14 @@
+@import '../../variables.scss';
+
 .searchBox {
-    margin-top: var(--padding-large);
+    margin-top: $padding-large;
 }
 
 .searchbar {
     width: auto;
     border-radius: 15px 0px 0px 15px;
     border-style: hidden;
-    padding: var(--padding) var(--padding-large);
+    padding: $padding $padding-large;
     margin: 0 auto;
     font-size: 15px;
     line-height: 20px;
@@ -15,9 +17,9 @@
 
 .searchbutton {
     width: auto;
-    padding: var(--padding) var(--padding-large);
-    background-color: var(--black);
-    color: var(--white);
+    padding: $padding $padding-large;
+    background-color: $black;
+    color: $white;
     border-radius: 15px;
     margin-left: -15px;
     border: none;
@@ -25,7 +27,7 @@
     line-height: 20px;
 }
 
-@media (--tablet) {
+@media (min-width: $tablet) {
     .searchbar {
         width: 400px;
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { NOT_FOUND } from '../../../constants/strings';
-import styles from './NotFound.module.css';
+import styles from './NotFound.module.scss';
 
 export default function NotFound({error}) {
 

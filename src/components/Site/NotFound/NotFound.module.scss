@@ -1,9 +1,11 @@
+@import '../../../variables.scss';
+
 .wrapper {
     background-image: url('/assets/img/404bg.jpg');
     background-size: cover;
-    padding: var(--padding-huge);
+    padding: $padding-huge;
     height: 100vh;
-    color: var(--white);
+    color: $white;
 }
 
 .content {
@@ -20,7 +22,7 @@
 }
 
 .logo:after {
-    background-color: var(--white);
+    background-color: $white;
     content: "";
     display: block;
     height: 2px;

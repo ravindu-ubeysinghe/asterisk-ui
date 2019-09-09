@@ -1,8 +1,10 @@
+@import '../../variables.scss';
+
 .carousel {
     width: 100%;
     height: calc(100vh - 80px);
     left: 0;
-    background: var(--bg-grey);
+    background: $bg-grey;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

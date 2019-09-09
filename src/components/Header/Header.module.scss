@@ -1,6 +1,8 @@
+@import '../../variables.scss';
+
 .navbar {
-    background-color: var(--white);
-    padding: var(--padding-large);
+    background-color: $white;
+    padding: $padding-large;
     max-height: 120px;
 }
 
@@ -20,7 +22,7 @@
 }
 
 .logoText:after {
-    background-color: var(--black);
+    background-color: $black;
     content: "";
     display: block;
     height: 2px;

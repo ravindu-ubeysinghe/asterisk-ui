@@ -1,5 +1,7 @@
+@import '../../variables.scss';
+
 .loadingOverlay {
-  background-color: var(--dark-grey);
+  background-color: $dark-grey;
   height: 100vh;
 }
 
