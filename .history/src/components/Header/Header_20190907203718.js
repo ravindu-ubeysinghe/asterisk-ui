@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getAsset, isMainSite } from 'config';
+import { getAsset, isMainSite } from '../../config';
 
 import styles from './Header.module.scss';
 

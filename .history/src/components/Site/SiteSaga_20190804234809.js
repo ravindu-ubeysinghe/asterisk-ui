@@ -1,6 +1,6 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import { config, constants } from 'config';
-import { get } from 'utils/api';
+import { config, constants } from '../../config';
+import { get } from '../../utils/api';
 
 function* saveSiteData(payload) {
     if (payload?.success) {

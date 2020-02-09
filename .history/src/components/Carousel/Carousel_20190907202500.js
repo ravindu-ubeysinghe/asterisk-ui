@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { componentIDS, constants } from '../../config';
 import { isArray } from 'lodash';
 
-import SearchBar from 'components/SearchBar/SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 import styles from './Carousel.module.scss';
 

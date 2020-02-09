@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Home from 'views/Home/Home';
-import About from 'views/About/About';
+import Home from '../../views/Home/Home';
+import About from '../../views/About/About';
 import NotFound from './NotFound/NotFound';
-import Loader from 'components/Loader/Loader';
-import withSkeleton from 'hooks/withSkeleton';
+import Loader from '../../components/Loader/Loader';
+import withSkeleton from '../../hooks/withSkeleton';
 
 export default function Site() {
     const dispatch = useDispatch();
