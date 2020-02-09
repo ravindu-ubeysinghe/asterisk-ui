@@ -6,8 +6,6 @@ import { isArray } from 'lodash';
 
 import SearchBar from 'components/SearchBar/SearchBar';
 
-import styles from './Carousel.module.scss';
-
 export default function Carousel() {
     const components = useSelector(state => state?.site?.components);
     const [carousel, setCarousel] = useState(false);

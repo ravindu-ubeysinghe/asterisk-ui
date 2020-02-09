@@ -21,9 +21,16 @@ const theme = {
         small: '11px',
         body: '14px',
         h4: '14px',
-        h3: '16px',
-        h2: '20px',
-        h1: '24px',
+        h3: '25px',
+        h2: '32px',
+        h1: '40px',
+    },
+    fontWeights: {
+        thin: '100',
+        normal: '400',
+        medium: '500',
+        bold: '700',
+        thick: '900',
     }
 }
 

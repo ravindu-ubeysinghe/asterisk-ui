@@ -20,9 +20,37 @@ const GlobalStyle = createGlobalStyle`
     a,
     span,
     strong,
-    b {
-        font-size: 15px;
+    b,
+    small,
+    h4,
+    h3,
+    h2,
+    h1 {
         color: ${theme.colors.black};
+    }
+
+    small {
+        font-size: ${theme.fontSizes.small}
+    }
+
+    body {
+        font-size: ${theme.fontSizes.body}
+    }
+
+    h4 {
+        font-size: ${theme.fontSizes.h4}
+    }
+
+    h3 {
+        font-size: ${theme.fontSizes.h3}
+    }
+
+    h2 {
+        font-size: ${theme.fontSizes.h2}
+    }
+
+    h1 {
+        font-size: ${theme.fontSizes.h1}
     }
 
     a,
