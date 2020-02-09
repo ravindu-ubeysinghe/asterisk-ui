@@ -25,7 +25,7 @@ export default function Carousel() {
             <CarouselOuter>
                 <CarouselInner>
                     <h1>{carousel.content_title || constants.GENERIC_PLACEHOLDER}</h1>
-                    <p>{carousel.content_subtitle || ''}</p>
+                    <CarouselSubTitle>{carousel.content_subtitle || ''}</CarouselSubTitle>
                     <SearchBar />
                 </CarouselInner>
             </CarouselOuter>
@@ -49,4 +49,9 @@ const CarouselOuter = styled.div`
 
 const CarouselInner = styled.div`
     padding: 30px;
+`;
+
+const CarouselSubTitle = styled.p`
+    text-shadow: 5px 5px 7px rgba(0,0,0,0.5);
+    font-style: italic;
 `;
