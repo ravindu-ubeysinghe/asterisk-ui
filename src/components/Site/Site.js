@@ -7,6 +7,7 @@ import About from 'views/About/About';
 import NotFound from './NotFound/NotFound';
 import Loader from 'components/Loader/Loader';
 import withSkeleton from 'hooks/withSkeleton';
+import { fetchSiteData } from 'actions/site';
 
 export default function Site() {
     const dispatch = useDispatch();
@@ -14,7 +15,7 @@ export default function Site() {
     const loading = useSelector(({ site }) => site.loading);
 
     useEffect(() => {
-        dispatch({ type: 'FETCH_SITE_DATA' });
+        dispatch(fetchSiteData());
     }, [dispatch]);
 
     if(loading) {
