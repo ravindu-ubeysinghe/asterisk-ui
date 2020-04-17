@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'; 
-import siteReducer from 'components/Site/SiteReducer';
+import siteReducer from 'reducers/site';
 
 export default combineReducers({
     site: siteReducer
