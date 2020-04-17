@@ -3,8 +3,8 @@ import parse from 'url-parse';
 const PROTOCOL = 'http';
 
 export const config = {
-    API_URL: `${PROTOCOL}://cms.foodmart.com.au:5000/api`,
-    STORAGE_URL: `${PROTOCOL}://cms.foodmart.com.au:5000/storage/`,
+    API_URL: `${PROTOCOL}://cms.onemart.com.au:5000/api`,
+    STORAGE_URL: `${PROTOCOL}://cms.onemart.com.au:5000/storage/`,
 }
 
 export const constants = {
@@ -24,7 +24,7 @@ export const componentIDS = {
 }
 
 export const mainSites = [
-    {domain: 'foodmart.com.au', menuItem: 'Restaurants', menuLink: '/restaurants'}
+    {domain: 'onemart.com.au', menuItem: 'Restaurants', menuLink: '/restaurants'}
     // TODO: Add other main sites 
 ]
 
