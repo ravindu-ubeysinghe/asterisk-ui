@@ -1,5 +1,6 @@
 const theme = {
     padding: {
+        none: '0px',
         small: "5px",
         regular: "10px",
         large: "20px",
@@ -12,10 +13,10 @@ const theme = {
         bgGrey: '#f3f3f3',
     },
     media: {
-        tablet: '768px',
-        tabletLarge: '1024px',
-        desktop: '1366px',
-        desktopLarge: '1920px',
+        tablet: '(min-width: 768px)',
+        tabletLarge: '(min-width: 1024px)',
+        desktop: '(min-width: 1366px)',
+        desktopLarge: '(min-width: 1920px)',
     },
     fontSizes: {
         small: '11px',

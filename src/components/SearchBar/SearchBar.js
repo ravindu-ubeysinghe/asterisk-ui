@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from './SearchBar.module.scss';
+import { SearchBox, SearchInput, SearchButton } from './SearchBarStyles';
 
 export default function SearchBar() {
     return (
-        <div className={styles.searchBox}>
-            <input type="text" placeholder="Cuisine/Restuarant" className={styles.searchbar} />
-            <button className={styles.searchbutton}>Search</button>
-        </div>
+        <SearchBox>
+            <SearchInput type="text" placeholder="Cuisine/Restuarant" />
+            <SearchButton>Search</SearchButton>
+        </SearchBox>
     );
 }

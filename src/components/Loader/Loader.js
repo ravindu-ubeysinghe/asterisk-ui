@@ -1,11 +1,11 @@
 import React from 'react';
 
-import styles from './Loader.module.scss';
+import { Overlay, LoaderWrapper } from './LoaderStyles';
 
 export default function Loader() {
     return (
-        <div className={styles.loadingOverlay}>
-            <div className={styles.loading}>
+        <Overlay>
+            <LoaderWrapper>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -22,7 +22,7 @@ export default function Loader() {
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
-        </div>
+            </LoaderWrapper>
+        </Overlay>
     )
 }

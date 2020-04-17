@@ -2,8 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getAsset, isMainSite } from 'config';
-
-import styles from './Header.module.scss';
+import { NavBar, Logo, LogoText, LogoImg, MainMenu } from './HeaderStyles';
 
 export default function Header() {
     const logoUrl = useSelector((state) => state.site.logo_url);
@@ -12,25 +11,25 @@ export default function Header() {
 
     const getLogo = () => {
         if(logoUrl) {
-            return  <img className={styles.logoImg} src={getAsset(logoUrl)} alt="Site Logo" />
+            return  <LogoImg src={getAsset(logoUrl)} alt="Site Logo" />
         }
 
-        return <div className={styles.logoText}>{logoText}</div>;
+        return <LogoText>{logoText}</LogoText>;
     }
 
     return (
-        <nav className={styles.navbar}>
-            <div className={styles.logo}>
+        <NavBar>
+            <Logo>
                 <Link to="/">{getLogo()}</Link>
-            </div>
-            <div className={styles.mainMenu}>
+            </Logo>
+            <MainMenu>
                 <ul>
                     {mainSite
                         ? (<li><Link to={mainSite.menuLink}>{mainSite.menuItem}</Link></li>)
                         : (<li><Link to="/menu">Menu</Link></li>)}
                     <li><Link to="/login">Login</Link></li>
                 </ul>
-            </div>
-        </nav>
+            </MainMenu>
+        </NavBar>
     );
 }

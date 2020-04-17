@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { NOT_FOUND } from 'constants/strings';
-import styles from './NotFound.module.scss';
+import { Wrapper, Content, Logo } from './NotFoundStyles';
 
 export default function NotFound({error}) {
 
@@ -10,12 +10,12 @@ export default function NotFound({error}) {
             <Helmet>
                 <title>Not Found | One Mart</title>
             </Helmet>
-            <div className={styles.wrapper}>
-                <div className={styles.content}>
-                    <div className={styles.logo}>oneMart</div>
+            <Wrapper>
+                <Content>
+                    <Logo>oneMart</Logo>
                     {error || NOT_FOUND}
-                </div>
-            </div>
+                </Content>
+            </Wrapper>
         </>
     );
 }
