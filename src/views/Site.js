@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
+import Layout from 'views/Layout/Layout';
 import Home from 'views/Home/Home';
 import About from 'views/About/About';
-import NotFound from './NotFound/NotFound';
+import NotFound from 'components/NotFound/NotFound';
 import Loader from 'components/Loader/Loader';
-import withSkeleton from 'hooks/withSkeleton';
 import { fetchSiteData } from 'actions/site';
 
 export default function Site() {
@@ -24,15 +24,15 @@ export default function Site() {
     return (
         <>
             {!server_error ? (
-                <>
-                    <BrowserRouter>
-                        <Switch>
-                            <Route path="/" exact component={withSkeleton(Home)} />
-                            <Route path="/about" component={withSkeleton(About)} />
-                            <Route component={NotFound} />
-                        </Switch>
-                    </BrowserRouter>
-                </>
+                <BrowserRouter>
+                    <Layout>
+                            <Switch>
+                                <Route path="/" exact component={Home} />
+                                <Route path="/about" component={About} />
+                                <Route component={NotFound} />
+                            </Switch>
+                    </Layout>
+                </BrowserRouter>
             ) : (
                 <NotFound error={server_error} />
             )}
