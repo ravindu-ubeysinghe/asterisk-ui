@@ -22,21 +22,18 @@ export default function Site() {
         return <Loader />;
     }
     return (
-        <>
+        <BrowserRouter>
             {!server_error ? (
-                <BrowserRouter>
-                    <Layout>
-                            <Switch>
-                                <Route path="/" exact component={Home} />
-                                <Route path="/about" component={About} />
-                                <Route component={NotFound} />
-                            </Switch>
-                    </Layout>
-                </BrowserRouter>
+            <Layout>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/about" component={About} />
+                        <Route component={NotFound} />
+                    </Switch>
+            </Layout>
             ) : (
-                <NotFound error={server_error} />
+               <NotFound error={server_error} />
             )}
-
-        </>
+        </BrowserRouter>
     );
 }

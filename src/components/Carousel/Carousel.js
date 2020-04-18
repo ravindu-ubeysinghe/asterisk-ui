@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { componentIDS, constants } from '../../config';
-import styled from 'styled-components';
 import { isArray } from 'lodash';
 
 import SearchBar from 'components/SearchBar/SearchBar';
+import { CarouselOuter, CarouselInner, CarouselSubTitle } from './CarouselStyles';
 
 export default function Carousel() {
     const components = useSelector(state => state?.site?.components);
@@ -33,25 +33,3 @@ export default function Carousel() {
     );
 }
 
-const CarouselOuter = styled.div`
-    width: 100%;
-    height: calc(100vh - 150px);
-    left: 0;
-    background: ${props => props.theme.colors.bgGrey};
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-`;
-
-const CarouselInner = styled.div`
-    padding: 30px;
-`;
-
-const CarouselSubTitle = styled.p`
-    text-shadow: 5px 5px 7px rgba(0,0,0,0.5);
-    font-style: italic;
-`;
